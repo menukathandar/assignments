@@ -15,7 +15,7 @@ console.log(a === b)
 //console.log "lesser than 3" else "greater"
 //Hint: Math.random()
 
-const randomNum = Math.random()*6
+const randomNum = Math.random()*6 
 const roundOffVal = Math.floor(randomNum)
 if(roundOffVal<3){
     console.log(roundOffVal + " is less than 3")
