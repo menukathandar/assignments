@@ -40,3 +40,5 @@ if (areAllEven(num)) {
 //expected output: 3
 const allNum = [3, 5, 2, 8, 5];
 const searchElement = 2;
+let index = allNum.indexOf(searchElement) +1
+console.log(index)
