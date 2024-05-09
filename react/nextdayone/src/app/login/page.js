@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import { useEffect,useRef } from 'react';
 // import NavBar from '../components/navbar/page'
 import Link from 'next/link'
 import { useFormik } from 'formik';
@@ -15,6 +16,12 @@ const SignInSchema = Yup.object().shape({
   
 });
 const SignInForm = () => {
+  const inputRef = useRef(null)
+  useEffect (() =>{
+    if(inputRef.current){
+      inputRef.current.focus()
+    }
+  },[])
   const formik = useFormik({
     initialValues: {
      Username:'',
@@ -34,6 +41,7 @@ const SignInForm = () => {
             <div className="mb-2">
             <label htmlFor="Username"></label>
               <Input
+                ref={inputRef}
                 isClearable
                 label="Username"
                 variant="bordered"
