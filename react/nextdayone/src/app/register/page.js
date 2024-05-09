@@ -59,6 +59,9 @@ const SignupForm = () => {
                 value={formik.values.Fullname}
                 placeholder="Enter your Fullname"
                 className="max-w-xs"
+                onClear = {()=>{
+                  formik.setFieldValue("Fullname",'')
+                }}
               />
               {formik.errors.Fullname}
             </div>
@@ -73,6 +76,9 @@ const SignupForm = () => {
                 value={formik.values.Address}
                 placeholder="Enter your Address"
                 className="max-w-xs"
+                onClear = {()=>{
+                  formik.setFieldValue("Address",'')
+                }}
               />
               {formik.errors.Address}
             </div>
@@ -88,8 +94,10 @@ const SignupForm = () => {
                 value={formik.values.DateOfBirth}
                 placeholder="Enter your DateOfBirth"
                 defaultValue="junior@nextui.org"
-                onClear={() => console.log("input cleared")}
                 className="max-w-xs"
+                onClear = {()=>{
+                  formik.setFieldValue("DateOfBirth",'')
+                }}
               />
               {formik.errors.DateOfBirth}
             </div>
@@ -105,7 +113,9 @@ const SignupForm = () => {
                 value={formik.values.Email}
                 placeholder="Enter your Email"
                 defaultValue="junior@nextui.org"
-                onClear={() => console.log("input cleared")}
+                onClear = {()=>{
+                  formik.setFieldValue("Email",'')
+                }}
                 className="max-w-xs"
               />
               {formik.errors.Email}
@@ -121,8 +131,11 @@ const SignupForm = () => {
                 value={formik.values.Username}
                 placeholder="Enter your Username"
                 defaultValue="junior@nextui.org"
-                onClear={() => console.log("input cleared")}
+                onClear = {()=>{
+                  formik.setFieldValue("Username",'')
+                }}
                 className="max-w-xs"
+
               />
               {formik.errors.Username}
             </div>
@@ -137,7 +150,9 @@ const SignupForm = () => {
                 name="Password"
                 value={formik.values.Password}
                 placeholder="Enter your Password"
-                onClear={() => console.log("input cleared")}
+                onClear = {()=>{
+                  formik.setFieldValue("Password",'')
+                }}
                 className="max-w-xs"
               />
               {formik.errors.Password}

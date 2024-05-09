@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import NavBar from '../components/navbar/page'
+// import NavBar from '../components/navbar/page'
 import Link from 'next/link'
 import { useFormik } from 'formik';
 import {Button,Input} from "@nextui-org/react";
