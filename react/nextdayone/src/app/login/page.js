@@ -42,7 +42,9 @@ const SignInForm = () => {
                 value={formik.values.Username}
                 placeholder="Enter your Username"
                 defaultValue="junior@nextui.org"
-                onClear={() => console.log("input cleared")}
+                onClear = {()=>{
+                  formik.setFieldValue("Username",'')
+                }}
                 className="max-w-xs"
               />
               {formik.errors.Username}
@@ -58,7 +60,9 @@ const SignInForm = () => {
                 name="Password"
                 value={formik.values.Password}
                 placeholder="Enter your Password"
-                onClear={() => console.log("input cleared")}
+                onClear = {()=>{
+                  formik.setFieldValue("Password",'')
+                }}
                 className="max-w-xs"
               />
               {formik.errors.Password}
