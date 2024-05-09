@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect,useRef } from 'react';
 import { useFormik } from 'formik';
 import {Button,Input} from "@nextui-org/react";
 import * as Yup from 'yup';
@@ -28,6 +28,12 @@ const SignupSchema = Yup.object().shape({
   
 });
 const SignupForm = () => {
+  const inputRef = useRef(null)
+  useEffect (() =>{
+    if(inputRef.current){
+      inputRef.current.focus()
+    }
+  },[])
   const formik = useFormik({
     initialValues: {
      Fullname: '',
@@ -51,6 +57,7 @@ const SignupForm = () => {
            <div className="mb-2">
             <label htmlFor="Fullname"></label>
               <Input
+                ref={inputRef}
                 isClearable
                 label="Fullname"
                 variant="bordered"
